@@ -1,1 +1,52 @@
+I installed the mongodb and mongoshell
 
+1. open cmd
+2. type mongosh - to access the mongoshell
+3. test> --it will appear
+4. show dbs --it will help to show all dbs
+
+
+------------------------------------------------
+
+
+
+Basics of MongoDB
+
+1. Here we call rows as documents.
+2. Here there is no schema.
+3. Here everything is key-value pairs.
+4. Here inner object is called embedded document.
+5. Here the primary key is _id
+6. _id is unique
+7. Here we uses BSON format which is superset of JSON
+8. Maximum size of the document is 116 MB
+9. Here we have Collection which is tables with different name
+10. "show dbs" will show dbs which has atleast one collection in it
+11. "db" commend will show the current db name
+12. "show collections" will show all the collections in the selected db
+13. "use <db name>" will switch to that db
+14. If the db is not exist, while using the use <db name> it will create one.
+15. "db.<collection name>.insertOne(<data in json format>)" will insert the data to the given collection.
+16. "db.<collection name>.find()" will show all data in that collections.
+17. "db.dropDatabase()" will drop the selected database.
+18. "db.crateCollection('<collection name>')" will create the collection in the selected db.
+19. "db.createCollection('<collection name>(mandatory)', <Options>(Optional))" 
+	-- Options: { capped : boolean, size : number, max : number, autoIndexId : boolean }
+	1. capped: collection with fixed size, by default it is false.
+	2. size: size is mandatory, if the capped is true. Size value is in bytes. If the collection size exceed, it delete old records.
+	3. max: max size of the document
+	4. autoIndexId : by default it is false.
+20. "db.<collection name>.drop()" will drop the collection.
+21. BSON (Binary JSON)
+22. "db.<collection name>.insertMany([{...},{...}])" will allow to insert many data(documents) at once.
+23. "db.<collection name>.findOne()" will show 1st data(document) in the collection.
+24. "db.<collection name>.find({ key : value })" will show all data(documents) with the same key and value in it.
+25. "db.<collection name>.findOne({ key : value })" will show 1st data that match the condition.
+26. find() and findOne is similar. Both have optional parameters.
+27. The include and exclude result, these process is called projection.
+28. The first parameter for filter the result.
+29. The second optional parameter is exclude and include the result.
+30. 0 or false to exclude and 1 or true to include.
+31. add pretty() to end in find() to format. In many cases, it formatted in prior.
+32. db.<collection name>.updateOne({_id : value}, { $set : { name : new_value } }) -- update
+33. 
