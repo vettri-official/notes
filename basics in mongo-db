@@ -48,5 +48,10 @@ Basics of MongoDB
 29. The second optional parameter is exclude and include the result.
 30. 0 or false to exclude and 1 or true to include.
 31. add pretty() to end in find() to format. In many cases, it formatted in prior.
-32. db.<collection name>.updateOne({_id : value}, { $set : { name : new_value } }) -- update
-33. 
+32. db.<collection name>.updateOne({_id : value}, { $set : { name : new_value } }) -- update one data
+33. db.<collection name>.updateMany({_id : value}, { $set : { name : new_value } }) -- update many data
+34. db.<collection name>.replaceOne( {_id : value}, { name : new_value } ) -- replace the value entirely without _id feild.
+35. db.<collection name>.deleteOne(<condition>) -- delete one data
+36. db.<collection name>.deleteOne({}) --empty object causes to delete the first data in collection.
+37. db.<collection name>.deleteMany(<condition>) -- delete all the data that satisfy the condition.
+38. db.<collection name>.deleteMany({}) -- delete all the records.
